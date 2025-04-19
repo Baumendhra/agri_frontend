@@ -4,7 +4,6 @@ import CropList from './components/CropList';
 import Weather from './components/Weather';
 import Login from './components/Login';
 import Register from './components/Register';
-import './App.css';
 
 function App() {
   return (

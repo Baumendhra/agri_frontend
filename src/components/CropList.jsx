@@ -6,7 +6,7 @@ function CropList(){
     useEffect(() => {
         fetch("http://127.0.0.1:8000/api/crops/")
         .then(res => res.json())
-        .then(data => setCrops());
+        .then(data => setCrops(data));
     }, [setCrops]);
     return(
         <div>
