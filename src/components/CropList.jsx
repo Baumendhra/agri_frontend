@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
 function CropList(){
-    const [crops,setCrops] = usestate([]);
+    const [crops,setCrops] = useState([]);
 
     useEffect(() => {
         fetch("http://127.0.0.1:8000/api/crops/")
         .then(res => res.json())
         .then(data => setCrops());
-    }, []);
+    }, [setCrops]);
     return(
         <div>
             <h2 className="text-xl font-bold mb-4">Available Crops</h2>
@@ -20,3 +20,5 @@ function CropList(){
         </div>
     );
 }
+
+export default CropList;
